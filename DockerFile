@@ -1,4 +1,4 @@
-FROM php:8.2-cli-alpine
+FROM php:8.4-cli-alpine
 
 # Install dependensi sistem, SQLite, dan Node.js untuk build frontend
 RUN apk add --no-cache nodejs npm git curl sqlite-dev libpng-dev
