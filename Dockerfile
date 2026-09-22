@@ -1,8 +1,8 @@
 FROM php:8.4-cli-alpine
 
 # Install dependensi sistem, SQLite, dan Node.js untuk build frontend
-RUN apk add --no-cache nodejs npm git curl sqlite-dev libpng-dev
-RUN docker-php-ext-install pdo pdo_sqlite gd
+RUN apk add --no-cache nodejs npm git curl sqlite-dev libpng-dev libzip-dev zip
+RUN docker-php-ext-install pdo pdo_sqlite gd zip
 
 # Install Composer
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
